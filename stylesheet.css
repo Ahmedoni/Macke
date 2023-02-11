@@ -1,0 +1,14 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p{
+    font-style: italic;
+}
+a{
+    color: orange;
+}
+#footer{
+    background-color: rgb(59, 53, 53);
+    font-style: normal;
+}

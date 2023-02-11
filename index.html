@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/TRWsYYZWEfDIDt9L/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Mačke</title>
+    </head>
+    <body>
+        <div id="naslov">
+            <h1>Mačke</h1>
+            <h3><a href="galerija.html" target="_blank">Vidite slike mačaka klikom na ovaj link</a></h3>
+        </div>
+        <div id="liste">
+            <h3>Stvari koje mačke vole</h3>
+            <ul>
+                <li>Hranu</li>
+                <li>Lasere</li>
+                <li>Macina trava</li>
+                <a href="https://en.wikipedia.org/wiki/Catnip" target="_blank"><img height="300px" width="450px" src="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcS-vrJwl2LP99ymqYY5RlWtnIIhxn7NkPn-4vOi1yF9xw1i_Z--GCdypOJqr6Rky0kZ1biON_i_62Xn1r4"></a>
+                <p>Macina trava</p>
+            </ul>
+            <h3>Stvari koje mačke ne vole</h3>
+            <ul>
+                <li>Haruna</li>
+                <li>Veterinara</li>
+                <li>Vodu</li>
+            </ul>
+            <form id="myForm">
+                <label>Ime</label>
+                <input name="Ime" />
+                <br/>
+                <label>Prezime</label>
+                <input name="Prezime" />
+                <br/>
+                <label>Link za sliku</label>
+                <input name="Link za sliku" />
+                <br/>
+            </form>
+            <button onclick='SubForm()'>Submit</button>
+        </div>
+        <div id="footer">
+            <p>Made by <a href="https://github.com/Ahmedoni" target="_blank">Ahmedoni</a></p>
+        </div>
+    </body>
+</html>
